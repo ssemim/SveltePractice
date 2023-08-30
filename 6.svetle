@@ -1,0 +1,38 @@
+<script>
+
+	let fruits = ['Apple','Banana','Cherry','Orange','Mango']
+	
+</script>
+
+
+<h2>
+	Fruits
+</h2>
+<ul>
+	{#each fruits as fruit}
+	<li>{fruit}</li>
+	{/each}
+</ul>
+
+<h2>
+	Fruits
+</h2>
+<ul>
+	{#each [...fruits].reverse() as fruit}
+	<li>{fruit}</li>
+	{/each}
+</ul>
+//리버스 배열은 원본 배열의 실제 배열을 반대로 만들어버린다.
+<!-- 
+...[배열] => 전개연산자로 감싸주면
+새로운 배열(복사본)이 생기고, 다른 메모리에 할당이 된다(메모리 참조에 대해 알고있어야함)
+-->
+<h2>
+	Fruits slice-2 // 끝에 두개만 나옴 
+</h2>
+<ul>
+	{#each fruits.slice(-2) as fruit}
+	<li>{fruit}</li>
+	{/each}
+</ul>
+
