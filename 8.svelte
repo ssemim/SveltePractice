@@ -31,3 +31,33 @@ store 객체가 반환되게 되고
 스벨트는 스토어를 내장시켜놨음
 신기하지
 라이브러리 설치할 필요 없음 짱 -->
+
+
+<!-- Parents.svelte -->
+<script>
+
+	import Child from './Child.svelte' 
+
+
+</script>
+
+<div>
+	Parent
+</div>
+<Child />
+
+//근데 여기서는 name 안쓰는데 그냥 전달만 해준다고 스쳐지나가면 쓰레기잔아
+//그래서 스벨트에는 store라는 시스템이 있음 (그냥 내려주기엔 복잡해질수록 거지같음)
+
+
+
+<!-- Children.svelte -->
+<script>
+
+	import {storeName }from './store.js'
+
+</script>
+
+<div>
+	Child {$storeName} 
+</div>
