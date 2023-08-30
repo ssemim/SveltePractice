@@ -1,3 +1,8 @@
+//깃 설치 필수 + node.js 설치 후 npm 버전 체크 
+//npx degit sveltejs/template svelte-app
+//cd svelte-app
+
+
 <script>
    let name = 'world';
    let age = 25
